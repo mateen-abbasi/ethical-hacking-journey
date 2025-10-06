@@ -1,35 +1,30 @@
-TryHackMe — Offensive Security Intro
+# TryHackMe — Offensive Security Intro
 
-Date: 2025-10-06
+**Date:** 2025-10-06  
+**Room:** Offensive Security Intro — https://tryhackme.com/room/offensive-security-intro  
+**Completed:** Yes (AttackBox used)
 
-Room: Offensive Security Intro — https://tryhackme.com/room/offensive-security-intro
+## Short summary
+I used `gobuster` to find hidden pages on the FakeBank site. I found `/bank-transfer`, opened that page in the browser, and used the form to transfer $2000 from account `2276` to account `8881`. The lab showed a success message and the updated balance.
 
-Completed: Yes (AttackBox machine was used)
+## What I did (steps)
+1. Ran directory discovery:
+   - Command I used: `gobuster dir -u http://fakebank.thm -w wordlist.txt`
+   - Result: found `/bank-transfer`.
 
-Summary
+2. Visited the page:
+   - Opened `http://fakebank.thm/bank-transfer` in the browser.
+   - Saw a transfer form with fields: `from`, `to`, `amount`.
 
-Intro to offensive security and web reconnaissance. In this lab I used gobuster to discover hidden directories on the FakeBank web app, found /bank-transfer, accessed the page in the browser and submitted a simulated transfer to credit account 8881 with $2000 (lab task).
+3. Submitted the transfer (in browser):
+   - Filled the form: `from = 2276`, `to = 8881`, `amount = 2000`.
+   - Clicked submit and saw a success/confirmation page with the updated balance.
 
-Environment
+## Proof (screenshots)
+- screenshots Tryhackme-offensive-intro-1.png — gobuster output 
+- screenshots Tryhackme-offensive-intro-2.png — bank-transfer page 
 
-Platform: TryHackMe AttackBox (in-browser Kali)
-
-Target: fakebank.thm (TryHackMe lab domain shown in room)
-
-Tools used: gobuster, web browser, browser devtools (form inspection), optional curl
-
-Commands / Steps (exact)
-
-Directory discovery with gobuster: gobuster dir -u http://fakebank.thm -w wordlist.txt
-
-Observed output included /bank-transfer with HTTP 200.
-
-Open discovered path in browser: http://fakebank.thm/bank-transfer
-
-Observed a simple transfer form with fields from, to, amount.
-
-Submit the simulated transfer (in-browser): filled the form and clicked Submit to transfer $2000 from account 2276 to account 8881.
-
-Optional example using curl: curl -X POST "http://fakebank.thm/bank-transfer" -d "from=2276&to=8881&amount=2000"
-
-Result: success page / updated balance visible on account page.
+## What I learned
+- Simple directory fuzzing can reveal hidden admin pages.
+- Always check forms in the browser (or with devtools) to see how they work.
+- Only test in authorized labs (this was on TryHackMe).
