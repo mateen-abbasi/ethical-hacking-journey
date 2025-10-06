@@ -20,9 +20,13 @@ I used `gobuster` to find hidden pages on the FakeBank site. I found `/bank-tran
    - Filled the form: `from = 2276`, `to = 8881`, `amount = 2000`.
    - Clicked submit and saw a success/confirmation page with the updated balance.
 
-## Proof (screenshots)
-- Screenshot Tryhackme-offensive-intro-1.png — gobuster output 
-- Screenshot Tryhackme-offensive-intro-2.png — bank-transfer page 
+## Proof (Screenshots)
+![Gobuster Output](../Tryhackme-offensive-intro-1.png)
+![Bank Transfer Success](../Tryhackme-offensive-intro-2.png)
+
+## Room answer
+BANK-HACKED
+
 
 ## What I learned
 - Simple directory fuzzing can reveal hidden admin pages.
