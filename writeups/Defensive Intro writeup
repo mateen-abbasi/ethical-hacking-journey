@@ -12,7 +12,7 @@ Completed Defensive Security Intro: learned basics of logging, detection, and al
 - Observed how the system flagged suspicious requests.
 
 ## Proof
-- /..tryhackme-defensive-intro-.png
-
+- (../Tryhackme-defensive-intro-1.png)
+- (../Tryhackme-defensive-intro-2.png)
 ## Key learning
 - Defenders rely on logs/IDS to spot recon and suspicious form activity.
