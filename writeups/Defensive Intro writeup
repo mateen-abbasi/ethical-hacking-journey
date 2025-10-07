@@ -1,0 +1,18 @@
+# TryHackMe — Defensive Security Intro
+
+**Date:** 2025-10-06  
+**Room:** Defensive Security Intro — https://tryhackme.com/room/defensive-security-intro  
+**Completed:** Yes
+
+## Short summary
+Completed Defensive Security Intro: learned basics of logging, detection, and alerting. Observed how simple web recon shows up in logs.
+
+## What I did
+- Completed the lab tasks and reviewed sample logs/alerts.
+- Observed how the system flagged suspicious requests.
+
+## Proof
+- /..tryhackme-defensive-intro-.png
+
+## Key learning
+- Defenders rely on logs/IDS to spot recon and suspicious form activity.
