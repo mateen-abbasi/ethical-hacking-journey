@@ -11,8 +11,12 @@ Completed Defensive Security Intro: learned basics of logging, detection, and al
 - Completed the lab tasks and reviewed sample logs/alerts.
 - Observed how the system flagged suspicious requests.
 
-## Proof
-- (../Tryhackme-defensive-intro-1.png)
-- (../Tryhackme-defensive-intro-2.png)
+## Proof (Screenshots)
+![Challenge Complete](../Tryhackme-defensive-intro-1.png)
+![Security Intro Complete](../Tryhackme-defensive-intro-2.png)
+
+## Room Status
+Completed both “Challenge Complete” and “Security Intro Complete” tasks in the Defensive Security Intro room.
+
 ## Key learning
 - Defenders rely on logs/IDS to spot recon and suspicious form activity.
